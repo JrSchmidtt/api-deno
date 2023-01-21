@@ -14,3 +14,8 @@ Docker
 ```bash
 docker run -it -p 8000:8000 -v $PWD:/app denoland/deno:1.29.4 run -A /app/main.ts
 ```
+
+Docker Compose
+```bash
+docker-compose up -d
+```
