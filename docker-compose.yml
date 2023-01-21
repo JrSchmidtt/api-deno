@@ -1,0 +1,17 @@
+version: "3.3"
+
+networks:
+  backend-network:
+    driver: bridge
+volumes:
+  redis-data:
+
+services:
+  api:
+    container_name: api-queue-worker
+    build: .
+    command: deno run -A main.ts
+    ports:
+      - "8083:8083"
+    networks:
+      - backend-network
